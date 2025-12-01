@@ -10,8 +10,6 @@ config DEVICE_MODULES_ALLOW_BUILTIN
 
 source "$(KCONFIG_EXT_PREFIX)drivers/mm/Kconfig"
 
-source "$(KCONFIG_EXT_PREFIX)drivers/block/zram/Kconfig"
-
 source "$(KCONFIG_EXT_PREFIX)drivers/memory/Kconfig"
 
 source "$(KCONFIG_EXT_PREFIX)drivers/iio/adc/Kconfig"
@@ -149,8 +147,6 @@ source "$(KCONFIG_EXT_PREFIX)/drivers/wingtechsh/Kconfig"
 source "$(KCONFIG_EXT_PREFIX)drivers/wt_security/Kconfig"
 
 source "$(KCONFIG_EXT_PREFIX)drivers/samsung/Kconfig"
-
-source "$(KCONFIG_EXT_PREFIX)block/Kconfig"
 
 source "$(KCONFIG_EXT_PREFIX)mm/sec_mm/Kconfig"
 

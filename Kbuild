@@ -10,8 +10,6 @@ subdir-ccflags-y += -Wall -Werror \
 
 obj-y += drivers/mm/
 
-obj-y += drivers/block/zram/
-
 obj-y += drivers/memory/
 
 obj-y += drivers/iio/adc/
@@ -133,8 +131,6 @@ obj-y += drivers/video/backlight/
 obj-y += drivers/wt_security/
 
 obj-y += drivers/samsung/
-
-obj-y += block/
 
 obj-y += mm/sec_mm/
 
