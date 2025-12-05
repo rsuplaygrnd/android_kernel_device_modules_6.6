@@ -10,6 +10,7 @@
 #include <linux/hrtimer.h>
 #include <linux/workqueue.h>
 #include <linux/pm_wakeup.h>
+#include <linux/minmax.h>
 #include <linux/err.h>
 #include <linux/cpu.h>
 #include <linux/delay.h>
@@ -25,10 +26,6 @@
 
 #define TCPC_NORMAL_RP_DUTY	(308)		/* 30% */
 #define TCPC_LOW_RP_DUTY    (100)          /**/
-
-#ifndef MIN
-#define MIN(a, b)       (((a) < (b)) ? (a) : (b))
-#endif
 
 /* provide to TCPC interface */
 extern int tcpci_report_usb_port_attached(struct tcpc_device *tcpc);

@@ -9,6 +9,7 @@
 #include <linux/types.h>
 #include <linux/kobject.h>
 #include <linux/proc_fs.h>
+#include <linux/minmax.h>
 #include <linux/seq_file.h>
 #include <linux/uaccess.h>
 #include <linux/err.h>
@@ -54,8 +55,6 @@
 static kuid_t uid = KUIDT_INIT(0);
 static kgid_t gid = KGIDT_INIT(1000);
 
-#define MIN(_a_, _b_) ((_a_) > (_b_) ? (_b_) : (_a_))
-#define MAX(_a_, _b_) ((_a_) > (_b_) ? (_a_) : (_b_))
 /* Charger Limiter
  * Charger Limiter provides API to limit charger IC input current and
  * battery charging current. It arbitrates the limitation from users and sets

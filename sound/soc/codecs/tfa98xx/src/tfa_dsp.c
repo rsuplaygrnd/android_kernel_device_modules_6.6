@@ -7,6 +7,8 @@
  *
  */
 
+#include <linux/minmax.h>
+
 #include "dbgprint.h"
 #include "tfa_container.h"
 #include "tfa.h"
@@ -39,10 +41,6 @@
 #define TFA98XX_KEY2_PROTECTED_MTP0_MTPOTC_MSK 0x1
 #define TFA98XX_KEY2_PROTECTED_MTP0_MTPEX_POS 1
 #define TFA98XX_KEY2_PROTECTED_MTP0_MTPOTC_POS 0
-
-#ifndef MIN
-#define MIN(A, B) (((A) - (B)) < 0 ? A : B)
-#endif
 
 /* retry values */
 #define CFSTABLE_TRIES 10

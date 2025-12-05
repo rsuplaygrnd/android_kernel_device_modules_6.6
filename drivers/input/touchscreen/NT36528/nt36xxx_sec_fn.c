@@ -15,6 +15,7 @@
 
 
 #include <linux/delay.h>
+#include <linux/minmax.h>
 
 #include "nt36xxx.h"
 #if SEC_TOUCH_CMD
@@ -89,10 +90,6 @@ typedef enum {
 #define XDATA_SECTOR_SIZE	256
 
 #define CMD_RESULT_WORD_LEN	10
-
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
-#define MAX(a, b) (((a) > (b)) ? (a) : (b))
-
 
 /* function bit combination code */
 #define EDGE_REJ_VERTICLE	1

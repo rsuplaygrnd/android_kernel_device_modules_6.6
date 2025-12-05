@@ -13,6 +13,7 @@
 #include <linux/workqueue.h>
 #include <linux/delay.h>
 #include <linux/time.h>
+#include <linux/minmax.h>
 #include <linux/sched.h>
 #include <uapi/linux/sched/types.h>
 #include <linux/ratelimit.h>
@@ -717,9 +718,6 @@ static uint32_t g_od_udma_effi[MAX_LONG_BURST_SIZE] = {
 static uint32_t g_od_udma_merge_lines_cand[] = {
 	1, 2, 4, 6, 8, 10, 12, 14, 16,
 };
-
-#define MIN(a,b) (((a)<(b))?(a):(b))
-
 
 static unsigned char lookup[16] = {
 	0x0, 0x8, 0x4, 0xc, 0x2, 0xa, 0x6, 0xe,

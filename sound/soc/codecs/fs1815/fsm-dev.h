@@ -54,6 +54,7 @@
 #include <linux/mutex.h>
 #include <linux/slab.h>
 #include <linux/delay.h>
+#include <linux/minmax.h>
 #if defined(CONFIG_REGULATOR)
 #include <linux/regulator/consumer.h>
 #include <sound/soc.h>
@@ -231,7 +232,6 @@ enum dev_id_index {
 
 #define FSM_DEV_MAX   (4)
 #define FSM_ADDR_BASE (0x34)
-#define MIN(a, b)     ((a) < (b) ? (a) : (b))
 #define HIGH8(val)    ((val >> 8) & 0xFF)
 #define LOW8(val)     (val & 0xFF)
 #define WORD(addr)    ((*(addr) << 8) & *((addr) + 1))

@@ -7,6 +7,7 @@
 #include <linux/component.h>
 #include <linux/of_device.h>
 #include <linux/of_irq.h>
+#include <linux/minmax.h>
 #include <linux/platform_device.h>
 #include <linux/ratelimit.h>
 
@@ -30,7 +31,6 @@
 #endif
 #include "mtk_disp_dsc.h"
 #include "platform/mtk_drm_platform.h"
-#define MIN(X, Y) ((X) <= (Y) ? (X) : (Y))
 
 #define DISP_REG_DSC_CON			0x0000
 	#define DSC_EN BIT(0)

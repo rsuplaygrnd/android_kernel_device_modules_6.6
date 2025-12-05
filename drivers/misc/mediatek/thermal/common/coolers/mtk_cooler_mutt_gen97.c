@@ -9,6 +9,7 @@
 #include <linux/types.h>
 #include <linux/kobject.h>
 #include <linux/proc_fs.h>
+#include <linux/minmax.h>
 #include <linux/uaccess.h>
 #include <linux/err.h>
 #include <linux/spinlock.h>
@@ -23,9 +24,6 @@
 /****************************************************************************
  *  Macro Definitions
  ****************************************************************************/
-#ifndef MAX
-#define MAX(a, b)		((a) >= (b) ? (a) : (b))
-#endif
 
 /* TMC interface */
 #define MUTT_ACTIVATED_OFFSET		(16)

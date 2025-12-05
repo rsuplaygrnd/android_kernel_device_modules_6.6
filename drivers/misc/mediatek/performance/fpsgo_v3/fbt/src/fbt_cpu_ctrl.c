@@ -13,6 +13,7 @@
 #include <linux/cpufreq.h>
 #include <linux/pm_qos.h>
 #include <linux/module.h>
+#include <linux/minmax.h>
 #include <linux/cpufreq.h>
 #include <linux/cgroup-defs.h>
 #include <linux/sched/cputime.h>
@@ -25,10 +26,6 @@
 #include "fbt_cpu.h"
 
 /*--------------------------------------------*/
-
-#define MAX(a, b) (((a) > (b)) ? (a) : (b))
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
-
 
 struct FBT_CPU_CTRL_NOTIFIER_PUSH_TAG {
 	int policy_id;

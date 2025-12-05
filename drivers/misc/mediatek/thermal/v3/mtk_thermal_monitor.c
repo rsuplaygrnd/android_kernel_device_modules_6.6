@@ -18,6 +18,7 @@
 #include <linux/thermal.h>
 #include <linux/platform_device.h>
 #include <linux/types.h>
+#include <linux/minmax.h>
 #include <linux/delay.h>
 #include <linux/proc_fs.h>
 #include <linux/err.h>
@@ -866,8 +867,6 @@ static const struct proc_ops _mtkthermal_tz_fops = {
 	.proc_write = _mtkthermal_tz_write,
 	.proc_release = single_release,
 };
-
-#define MIN(_a_, _b_) ((_a_) < (_b_) ? (_a_) : (_b_))
 
 /* No parameter check in this internal function */
 static long _mtkthermal_update_and_get_sma

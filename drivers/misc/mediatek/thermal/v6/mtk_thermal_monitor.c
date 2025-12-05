@@ -23,6 +23,7 @@
 #include <linux/syscalls.h>
 #include <linux/time.h>
 #include <linux/string.h>
+#include <linux/minmax.h>
 #include <linux/mutex.h>
 #include <linux/bug.h>
 #include <linux/workqueue.h>
@@ -868,8 +869,6 @@ static const struct proc_ops _mtkthermal_tz_fops = {
 	.proc_write = _mtkthermal_tz_write,
 	.proc_release = single_release,
 };
-
-#define MIN(_a_, _b_) ((_a_) < (_b_) ? (_a_) : (_b_))
 
 /* No parameter check in this internal function */
 static long _mtkthermal_update_and_get_sma

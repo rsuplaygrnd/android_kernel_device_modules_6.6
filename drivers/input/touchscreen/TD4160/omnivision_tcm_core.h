@@ -36,6 +36,7 @@
 #include <linux/module.h>
 #include <linux/input.h>
 #include <linux/delay.h>
+#include <linux/minmax.h>
 #include <linux/platform_device.h>
 #ifdef CONFIG_DRM
 #include <drm/drm_panel.h>
@@ -155,16 +156,6 @@ struct ovt_tcm_board_data {
 			buffer.data_length = 0; \
 		} \
 	} while (0)
-
-#define MAX(a, b) \
-	({__typeof__(a) _a = (a); \
-	__typeof__(b) _b = (b); \
-	_a > _b ? _a : _b; })
-
-#define MIN(a, b) \
-	({__typeof__(a) _a = (a); \
-	__typeof__(b) _b = (b); \
-	_a < _b ? _a : _b; })
 
 #define STR(x) #x
 

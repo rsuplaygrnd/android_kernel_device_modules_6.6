@@ -15,13 +15,12 @@
 #include <linux/sched/clock.h>
 #include <linux/mutex.h>
 #include <linux/spinlock.h>
+#include <linux/minmax.h>
 #include <linux/poll.h>
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h>
 #include "blocktag-internal.h"
 #include "blocktag-fuse-trace.h"
-
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
 
 #define EARA_IOCTL_MAX_SIZE 27
 struct _EARA_IOCTL_PACKAGE {

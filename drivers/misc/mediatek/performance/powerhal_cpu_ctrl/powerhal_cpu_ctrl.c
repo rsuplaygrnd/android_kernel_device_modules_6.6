@@ -7,6 +7,7 @@
 #include <linux/cpumask.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
+#include <linux/minmax.h>
 #include <linux/kobject.h>
 #include <linux/device.h>
 #include <linux/slab.h>
@@ -63,9 +64,6 @@ static const struct proc_ops perfmgr_ ## name ## _proc_fops = { \
 		if (debug_enable) \
 			pr_debug(fmt, ##x); \
 	} while (0)
-
-#define MAX(a, b) (((a) > (b)) ? (a) : (b))
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
 
 #define CLUSTER_MAX 10
 #define CORE_MAX 8
